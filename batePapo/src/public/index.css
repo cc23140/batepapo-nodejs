@@ -10,7 +10,7 @@ body {
     color: #575ed8;
   }
   
-  #mario-chat{
+  #layout-chat{
     max-width: 600px;
     margin: 30px auto; 
     border: 1px solid #ddd;
@@ -39,7 +39,7 @@ body {
   }
   
   input {
-    padding: 10px 20px;
+    padding: 10px 10px;
     box-sizing: border-box;
     background: #eee;
     border: 0;
@@ -62,7 +62,11 @@ body {
   }
 
   #insertions {
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
+    margin: auto;
+    margin-top: 2%;
+    max-width: 600px;
+  }
+
+  #insertions > input {
+    border: 1px solid gray;
   }

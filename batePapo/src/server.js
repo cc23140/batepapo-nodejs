@@ -19,9 +19,9 @@ app.use(express.static("public"))
 const io = socket(server)
 
 io.on('connection', socket =>{
-    console.log('Cliente conectado com sucesso! Id: ', socket.id)
 
-    socket.on('chat', (data)=>{
+    console.log('Cliente conectado com sucesso! Id: ', socket.id)
+    socket.on('chat', data=>{
         io.sockets.emit('chat', data) //io.sockets se refere à todos os sockets conectados no server , e o .emit() manda msg pra eles
         
     })
