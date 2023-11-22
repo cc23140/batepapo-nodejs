@@ -11,6 +11,8 @@ const output = document.querySelector('#output')
 
 
 
+
+
  //Emit Events
 btn.addEventListener('click', ()=>{
     handle.disabled = 'true'    //FAZ COM QUE, APÓS O USUÁRIO MANDAR UMA MSG, ELE SEJA IMPOSSIBILITADO DE TROCAR DE NOME DE USUÁRIO
@@ -46,4 +48,8 @@ socket.on('chat', data=>{
         }
     }
     
+})
+
+socket.on('out', data=>{
+    output.innerHTML += `<h2>Alguém saiu do chat :(</h2>`
 })
